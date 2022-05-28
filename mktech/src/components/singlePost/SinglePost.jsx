@@ -94,7 +94,7 @@ export default function SinglePost() {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{desc}</p>
+          <p className="singlePostDesc" dangerouslySetInnerHTML = {{ __html:desc }}></p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
